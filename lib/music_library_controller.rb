@@ -22,15 +22,14 @@ class MusicLibraryController
     end
   end
   
-  def list_songs(gets)
-    if gets.chomp == "list songs"
-      sorted_songs = Song.all.uniq.sort { |song_a, song_b| song_a.name <=> song_b.name }
-      sorted_songs.each_with_index do |song, index|
-        song_artist = song.artist.name
-        song_genre = song.genre.name
-        song_name = song.name
-        puts "#{index + 1}. #{song_artist} - #{song_name} - #{song_genre}"
-      end
+  def list_songs
+    sorted_songs = Song.all.uniq.sort { |song_a, song_b| song_a.name <=> song_b.name }
+    sorted_songs.each_with_index do |song, index|
+      song_artist = song.artist.name
+      song_genre = song.genre.name
+      song_name = song.name
+      puts "#{index + 1}. #{song_artist} - #{song_name} - #{song_genre}"
+    end
     end
   end
   
