@@ -95,7 +95,4 @@ class MusicLibraryController
       puts "Playing #{song_name} by #{song_artist}"
     end
   end
-  
 end
-
-# rspec spec/012_music_library_cli_spec.rb
