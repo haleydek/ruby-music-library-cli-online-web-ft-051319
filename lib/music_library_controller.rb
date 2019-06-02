@@ -22,7 +22,7 @@ class MusicLibraryController
     end
   end
   
-  def list_songs(gets.chomp)
+  def list_songs(gets)
     if gets.chomp == "list songs"
       sorted_songs = Song.all.uniq.sort { |song_a, song_b| song_a.name <=> song_b.name }
       sorted_songs.each_with_index do |song, index|
