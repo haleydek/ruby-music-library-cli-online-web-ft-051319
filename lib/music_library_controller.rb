@@ -20,8 +20,15 @@ class MusicLibraryController
     user_input = gets.chomp
     
     until user_input == "exit"
-      if user_input == "list songs"
-        list_songs
+      case user_input
+        when "list songs"
+          list_songs
+        when "list artists"
+          list_artists
+        when "list genres"
+          list_genres
+        when "play song"
+          
       end
       puts "What would you like to do?"
     end
