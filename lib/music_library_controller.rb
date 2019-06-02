@@ -17,7 +17,12 @@ class MusicLibraryController
     puts "To play a song, enter 'play song'."
     puts "To quit, type 'exit'."
     puts "What would you like to do?"
-    until gets.chomp == "exit"
+    user_input = gets.chomp
+    
+    until user_input == "exit"
+      if user_input == "list songs"
+        list_songs
+      end
       puts "What would you like to do?"
     end
   end
