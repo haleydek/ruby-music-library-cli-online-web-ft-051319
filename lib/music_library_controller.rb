@@ -29,7 +29,6 @@ class MusicLibraryController
           list_genres
         when "play song"
           play_song
-        when ""
       end
     end
   end
